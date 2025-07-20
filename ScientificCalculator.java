@@ -61,6 +61,10 @@ public class ScientificCalculator {
         }
         return Math.log10(num);
     }
+    public static double absolute(double num){
+        return Math.abs(num);
+    }
+    
 
 
 
@@ -99,7 +103,10 @@ public class ScientificCalculator {
                         break;
                     case 11:
                         result = calculateLogarithmBase10(num1);
-                        break;            
+                        break;
+                    case 12:
+                        result = absolute(num1);
+                        break;                
         }
     }                        
 }
