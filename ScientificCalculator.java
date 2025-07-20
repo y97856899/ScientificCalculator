@@ -1,6 +1,9 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 public class ScientificCalculator {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        performOperation(input);
 
 
     }
@@ -195,7 +198,8 @@ public class ScientificCalculator {
                 scanner.nextLine();
 
 
-            }    
+            }  
+            System.out.println();  
     }                        
 }
 }
