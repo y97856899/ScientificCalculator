@@ -13,6 +13,14 @@ public class ScientificCalculator {
     public static double multiply(double first,double second){
         return first*second;
     }
+    public static double divide(double first,double second){
+
+        if (second==0){
+            System.out.println("Error: division by zero");
+            return 0;
+        }
+        return first/second;
+    }
 
 
 
@@ -30,7 +38,10 @@ public class ScientificCalculator {
                         break;
                     case 3:
                         result = multiply(num1, num2);
-                        break;    
+                        break;  
+                    case 4:
+                        result = divide(num1, num2);
+                        break;      
         }
     }                        
 }
