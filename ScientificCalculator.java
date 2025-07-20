@@ -10,6 +10,9 @@ public class ScientificCalculator {
     public static double subtract(double first,double second){
         return first-second;
     }
+    public static double multiply(double first,double second){
+        return first*second;
+    }
 
 
 
@@ -25,6 +28,9 @@ public class ScientificCalculator {
                     case 2:
                         result = subtract(num1, num2);
                         break;
+                    case 3:
+                        result = multiply(num1, num2);
+                        break;    
         }
     }                        
 }
