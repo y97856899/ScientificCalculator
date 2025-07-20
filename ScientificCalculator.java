@@ -64,6 +64,15 @@ public class ScientificCalculator {
     public static double absolute(double num){
         return Math.abs(num);
     }
+    public static long roundNumber(double num){
+        return Math.round(num);
+    }
+    public static double ceilingNumber(double num){
+        return Math.ceil(num);
+    }
+    public static double floorNumber(double num){
+        return Math.floor(num);
+    }
     
 
 
@@ -106,7 +115,16 @@ public class ScientificCalculator {
                         break;
                     case 12:
                         result = absolute(num1);
-                        break;                
+                        break;
+                    case 13:
+                        result = roundNumber(num1);
+                        break;
+                    case 14:
+                        result = ceilingNumber(num1);
+                        break;
+                    case 15:
+                        result = floorNumber(num1);
+                        break;                    
         }
     }                        
 }
