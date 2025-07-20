@@ -54,6 +54,13 @@ public class ScientificCalculator {
         }
         return Math.log(num);
     }
+    public static double calculateLogarithmBase10(double num){
+        if(num <=0){
+            System.out.println("Error: log10(x) is undefined for x <= 0.");
+            return 0;
+        }
+        return Math.log10(num);
+    }
 
 
 
@@ -89,7 +96,10 @@ public class ScientificCalculator {
                         break;        
                     case 10:
                         result = calculateNaturalLogarithm(num1);
-                        break;        
+                        break;
+                    case 11:
+                        result = calculateLogarithmBase10(num1);
+                        break;            
         }
     }                        
 }
