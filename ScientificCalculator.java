@@ -73,6 +73,12 @@ public class ScientificCalculator {
     public static double floorNumber(double num){
         return Math.floor(num);
     }
+    public static double findMin(double num1, double num2){
+        return Math.min(num1,num2);
+    }
+    public static double findMax(double num1, double num2){
+        return Math.max(num1,num2);
+    }
     
 
 
@@ -124,7 +130,13 @@ public class ScientificCalculator {
                         break;
                     case 15:
                         result = floorNumber(num1);
-                        break;                    
+                        break;             
+                    case 16:
+                        result = findMin(num1, num2);
+                        break;
+                    case 17:
+                        result = findMax(num1, num2);
+                        break;           
         }
     }                        
 }
