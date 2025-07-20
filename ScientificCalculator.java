@@ -108,58 +108,95 @@ public class ScientificCalculator {
 
 
     public static void performOperation(Scanner scanner){
-        switch (choice) {
-                    case 1:
-                        result = add(num1, num2);
-                        break;
-                    case 2:
-                        result = subtract(num1, num2);
-                        break;
-                    case 3:
-                        result = multiply(num1, num2);
-                        break;  
-                    case 4:
-                        result = divide(num1, num2);
-                        break;
-                    case 5:
-                        result = calculateSquareRoot(num1);
-                        break;       
-                    case 6:
-                        result = calculatePower(num1, num2);
-                        break;
-                    case 7:
-                        result = calculateSine(num1);
-                        break;      
-                    case 8:
-                        result = calculateCosine(num1);
-                        break;
-                    case 9:
-                        result = calculateTangent(num1);
-                        break;        
-                    case 10:
-                        result = calculateNaturalLogarithm(num1);
-                        break;
-                    case 11:
-                        result = calculateLogarithmBase10(num1);
-                        break;
-                    case 12:
-                        result = absolute(num1);
-                        break;
-                    case 13:
-                        result = roundNumber(num1);
-                        break;
-                    case 14:
-                        result = ceilingNumber(num1);
-                        break;
-                    case 15:
-                        result = floorNumber(num1);
-                        break;             
-                    case 16:
-                        result = findMin(num1, num2);
-                        break;
-                    case 17:
-                        result = findMax(num1, num2);
-                        break;           
-        }
+        boolean cont = true;
+        while (cont) {
+            displayMenu();
+            try {
+                System.out.print("Enter the operation number: ");
+                int choice = scanner.nextInt();
+
+                if (choice == 0) {
+                    System.out.println("Goodbye!");
+                    System.exit(0);
+                }
+
+                double num1 = 0, num2 = 0, result = 0;
+
+
+                if (choice >= 1 && choice <= 4 || choice == 6 || choice == 13 || choice == 16 || choice == 17) {
+                    System.out.print("Enter first number: ");
+                    num1 = scanner.nextDouble();
+
+                    System.out.print("Enter second number: ");
+                    num2 = scanner.nextDouble();
+                } else if (choice >= 5 && choice <= 14) {
+                    // For single-number operations
+                    System.out.print("Enter a number: ");
+                    num1 = scanner.nextDouble();
+                }
+                switch (choice) {
+                            case 1:
+                                result = add(num1, num2);
+                                break;
+                            case 2:
+                                result = subtract(num1, num2);
+                                break;
+                            case 3:
+                                result = multiply(num1, num2);
+                                break;  
+                            case 4:
+                                result = divide(num1, num2);
+                                break;
+                            case 5:
+                                result = calculateSquareRoot(num1);
+                                break;       
+                            case 6:
+                                result = calculatePower(num1, num2);
+                                break;
+                            case 7:
+                                result = calculateSine(num1);
+                                break;      
+                            case 8:
+                                result = calculateCosine(num1);
+                                break;
+                            case 9:
+                                result = calculateTangent(num1);
+                                break;        
+                            case 10:
+                                result = calculateNaturalLogarithm(num1);
+                                break;
+                            case 11:
+                                result = calculateLogarithmBase10(num1);
+                                break;
+                            case 12:
+                                result = absolute(num1);
+                                break;
+                            case 13:
+                                result = roundNumber(num1);
+                                break;
+                            case 14:
+                                result = ceilingNumber(num1);
+                                break;
+                            case 15:
+                                result = floorNumber(num1);
+                                break;             
+                            case 16:
+                                result = findMin(num1, num2);
+                                break;
+                            case 17:
+                                result = findMax(num1, num2);
+                                break;           
+                }
+
+                System.out.println("Resutl is " + result);
+
+            } catch (InputMismatchException e) {
+                System.out.println(" Invalid input!");
+                scanner.nextLine();
+
+
+            }    
     }                        
 }
+}
+
