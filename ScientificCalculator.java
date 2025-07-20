@@ -21,6 +21,13 @@ public class ScientificCalculator {
         }
         return first/second;
     }
+    public static double calculateSquareRoot(double num){
+        if (num <0){
+            System.out.println("Error: Cannot calculate the square root of a negative number.");
+            return 0;
+        }
+        return Math.sqrt(num);
+    }
 
 
 
@@ -41,7 +48,10 @@ public class ScientificCalculator {
                         break;  
                     case 4:
                         result = divide(num1, num2);
-                        break;      
+                        break;
+                    case 5:
+                        result = calculateSquareRoot(num1);
+                        break;          
         }
     }                        
 }
