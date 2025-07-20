@@ -35,6 +35,10 @@ public class ScientificCalculator {
         double result = Math.toRadians(degrees);
         return Math.sin(result);
     }
+    public static double calculateCosine(double degrees){
+        double result = Math.toRadians(degrees);
+        return Math.cos(result);
+    }
 
 
 
@@ -64,7 +68,10 @@ public class ScientificCalculator {
                         break;
                     case 7:
                         result = calculateSine(num1);
-                        break;           
+                        break;      
+                    case 8:
+                        result = calculateCosine(num1);
+                        break;        
         }
     }                        
 }
