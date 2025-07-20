@@ -31,6 +31,10 @@ public class ScientificCalculator {
     public static double calculatePower(double base, double exponent){
         return Math.pow(base,exponent);
     }
+    public static double calculateSine(double degrees){
+        double result = Math.toRadians(degrees);
+        return Math.sin(result);
+    }
 
 
 
@@ -57,7 +61,10 @@ public class ScientificCalculator {
                         break;       
                     case 6:
                         result = calculatePower(num1, num2);
-                        break;       
+                        break;
+                    case 7:
+                        result = calculateSine(num1);
+                        break;           
         }
     }                        
 }
