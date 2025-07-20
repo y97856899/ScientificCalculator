@@ -1,9 +1,32 @@
 import java.util.Scanner;
 public class ScientificCalculator {
     public static void main(String[] args) {
+
+
     }
     public static void displayMenu(){
+        System.out.println("\n==== Scientific Calculator Menu ====");
+        System.out.println("1. Add");
+        System.out.println("2. Subtract");
+        System.out.println("3. Multiply");
+        System.out.println("4. Divide");
+        System.out.println("5. Square Root");
+        System.out.println("6. Power (x^y)");
+        System.out.println("7. Sine (degrees)");
+        System.out.println("8. Cosine (degrees)");
+        System.out.println("9. Tangent (degrees)");
+        System.out.println("10. Natural Log (ln)");
+        System.out.println("11. Log base 10");
+        System.out.println("12. Absolute Value");
+        System.out.println("13. Round number");
+        System.out.println("14. Ceiling number");
+        System.out.println("15. Floor number");
+        System.out.println("16. Find min");
+        System.out.println("17. Find Max");
+        System.out.println("0. Exit");
+        System.out.println("====================================");
     }
+    
     public static double add(double first,double second){
         return first+second;
     }
