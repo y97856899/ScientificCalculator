@@ -28,6 +28,9 @@ public class ScientificCalculator {
         }
         return Math.sqrt(num);
     }
+    public static double calculatePower(double base, double exponent){
+        return Math.pow(base,exponent);
+    }
 
 
 
@@ -51,7 +54,10 @@ public class ScientificCalculator {
                         break;
                     case 5:
                         result = calculateSquareRoot(num1);
-                        break;          
+                        break;       
+                    case 6:
+                        result = calculatePower(num1, num2);
+                        break;       
         }
     }                        
 }
