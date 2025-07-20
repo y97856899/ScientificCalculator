@@ -47,9 +47,13 @@ public class ScientificCalculator {
         double result = Math.toRadians(degrees);
         return Math.tan(result);
     }
-
-
-
+    public static double calculateNaturalLogarithm(double num){
+        if(num <=0){
+            System.out.println("Error: log(x) is undefined for x <= 0");
+            return 0;
+        }
+        return Math.log(num);
+    }
 
 
 
@@ -82,7 +86,10 @@ public class ScientificCalculator {
                         break;
                     case 9:
                         result = calculateTangent(num1);
-                        break;            
+                        break;        
+                    case 10:
+                        result = calculateNaturalLogarithm(num1);
+                        break;        
         }
     }                        
 }
