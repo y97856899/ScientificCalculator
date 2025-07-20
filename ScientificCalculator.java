@@ -39,6 +39,14 @@ public class ScientificCalculator {
         double result = Math.toRadians(degrees);
         return Math.cos(result);
     }
+    public static double calculateTangent(double degrees){
+        if(degrees%180 == 90){
+            System.out.println("Error ");
+            return 0;
+        }
+        double result = Math.toRadians(degrees);
+        return Math.tan(result);
+    }
 
 
 
@@ -71,7 +79,10 @@ public class ScientificCalculator {
                         break;      
                     case 8:
                         result = calculateCosine(num1);
-                        break;        
+                        break;
+                    case 9:
+                        result = calculateTangent(num1);
+                        break;            
         }
     }                        
 }
